@@ -1,4 +1,4 @@
-import WaitlistForm from "./WaitlistForm";
+import WaitlistModal from "./WaitlistModal";
 
 const FinalCTA = () => {
   return (
@@ -14,7 +14,13 @@ const FinalCTA = () => {
           Join the waitlist. We'll email rollout details—no overpromised dates.
         </p>
         <div className="flex justify-center">
-          <WaitlistForm />
+          <WaitlistModal
+            trigger={
+              <button className="font-mono-ui text-xs font-semibold tracking-wider bg-primary text-primary-foreground px-6 py-3 rounded-sm hover:brightness-90 transition-all whitespace-nowrap">
+                JOIN_WAITLIST
+              </button>
+            }
+          />
         </div>
       </div>
 

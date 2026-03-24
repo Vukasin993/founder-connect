@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import RadarVisual from "./RadarVisual";
-import WaitlistForm from "./WaitlistForm";
+import WaitlistModal from "./WaitlistModal";
 
 const HeroSection = () => {
   return (
@@ -38,7 +38,7 @@ const HeroSection = () => {
               Turn conferences, coworking, and city life into high-signal founder connections.
             </p>
 
-            <WaitlistForm />
+            <WaitlistModal />
 
             <div className="mt-8 flex items-center gap-6 font-mono-ui text-xs text-muted-foreground">
               <span className="flex items-center gap-2">
