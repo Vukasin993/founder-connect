@@ -19,7 +19,7 @@ const PricingSection = () => {
                 <span className="text-5xl font-bold">$9.99</span>
                 <span className="text-muted-foreground text-sm">/month</span>
               </div>
-              <div className="font-mono-ui text-xs text-muted-foreground">7-DAY FREE TRIAL INCLUDED</div>
+              {/* <div className="font-mono-ui text-xs text-muted-foreground">7-DAY FREE TRIAL INCLUDED</div> */}
             </div>
             <div className="p-8 space-y-3 font-mono-ui text-sm text-muted-foreground">
               {[

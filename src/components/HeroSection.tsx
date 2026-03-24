@@ -45,7 +45,7 @@ const HeroSection = () => {
                 <span className="w-1.5 h-1.5 rounded-full bg-success" />
                 STATUS: BUILDING
               </span>
-              <span>7-DAY FREE TRIAL</span>
+              {/* <span>7-DAY FREE TRIAL</span> */}
             </div>
           </motion.div>
 
