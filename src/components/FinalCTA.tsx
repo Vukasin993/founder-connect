@@ -2,12 +2,12 @@ import WaitlistModal from "./WaitlistModal";
 
 const FinalCTA = () => {
   return (
-    <section className="py-32 relative overflow-hidden" id="waitlist">
+    <section className="py-32 relative overflow-hidden" id="waitlist" aria-labelledby="waitlist-heading">
       <div className="container px-6 relative z-10 text-center">
         <div className="font-mono-ui text-xs text-muted-foreground tracking-widest uppercase mb-6">
           [ REQUEST_ACCESS ]
         </div>
-        <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+        <h2 id="waitlist-heading" className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
           Be first in <span className="text-primary">your city.</span>
         </h2>
         <p className="text-muted-foreground text-lg max-w-lg mx-auto mb-10">

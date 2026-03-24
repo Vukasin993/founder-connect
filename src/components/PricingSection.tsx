@@ -2,12 +2,12 @@ import WaitlistForm from "./WaitlistForm";
 
 const PricingSection = () => {
   return (
-    <section className="border-b border-border py-24" id="pricing">
+    <section className="border-b border-border py-24" id="pricing" aria-labelledby="pricing-heading">
       <div className="container px-6">
         <div className="font-mono-ui text-xs text-muted-foreground tracking-widest uppercase mb-4">
           [ PRICING ]
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-16">
+        <h2 id="pricing-heading" className="text-4xl md:text-5xl font-bold tracking-tight mb-16">
           Simple <span className="text-primary">pricing.</span>
         </h2>
 
@@ -19,7 +19,7 @@ const PricingSection = () => {
                 <span className="text-5xl font-bold">$9.99</span>
                 <span className="text-muted-foreground text-sm">/month</span>
               </div>
-              {/* <div className="font-mono-ui text-xs text-muted-foreground">7-DAY FREE TRIAL INCLUDED</div> */}
+              <div className="font-mono-ui text-xs text-muted-foreground">7-DAY FREE TRIAL INCLUDED</div>
             </div>
             <div className="p-8 space-y-3 font-mono-ui text-sm text-muted-foreground">
               {[

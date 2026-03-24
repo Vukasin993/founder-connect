@@ -4,7 +4,7 @@ import WaitlistModal from "./WaitlistModal";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center border-b border-border overflow-hidden">
+    <section className="relative min-h-screen flex items-center border-b border-border overflow-hidden" aria-label="Hero section">
       {/* Subtle grid bg */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -13,6 +13,7 @@ const HeroSection = () => {
             "linear-gradient(hsl(0 0% 50%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 50%) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }}
+        aria-hidden="true"
       />
 
       <div className="container relative z-10 px-6 pt-24 pb-16">
@@ -45,7 +46,7 @@ const HeroSection = () => {
                 <span className="w-1.5 h-1.5 rounded-full bg-success" />
                 STATUS: BUILDING
               </span>
-              {/* <span>7-DAY FREE TRIAL</span> */}
+              <span>7-DAY FREE TRIAL</span>
             </div>
           </motion.div>
 

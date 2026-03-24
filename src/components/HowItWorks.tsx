@@ -25,12 +25,12 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="border-b border-border py-24" id="how-it-works">
+    <section className="border-b border-border py-24" id="how-it-works" aria-labelledby="how-it-works-heading">
       <div className="container px-6">
         <div className="font-mono-ui text-xs text-muted-foreground tracking-widest uppercase mb-4">
           [ PROTOCOL ]
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-16">
+        <h2 id="how-it-works-heading" className="text-4xl md:text-5xl font-bold tracking-tight mb-16">
           How it <span className="text-primary">works.</span>
         </h2>
 

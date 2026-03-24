@@ -18,12 +18,12 @@ const features = [
 
 const FeaturesGrid = () => {
   return (
-    <section className="border-b border-border py-24" id="features">
+    <section className="border-b border-border py-24" id="features" aria-labelledby="features-heading">
       <div className="container px-6">
         <div className="font-mono-ui text-xs text-muted-foreground tracking-widest uppercase mb-4">
           [ FEATURE_SET ]
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-16">
+        <h2 id="features-heading" className="text-4xl md:text-5xl font-bold tracking-tight mb-16">
           Everything in <span className="text-primary">one app.</span>
         </h2>
 

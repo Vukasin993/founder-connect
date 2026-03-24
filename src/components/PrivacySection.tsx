@@ -19,7 +19,7 @@ const faqs = [
 
 const PrivacySection = () => {
   return (
-    <section className="border-b border-border py-24" id="faq">
+    <section className="border-b border-border py-24" id="faq" aria-labelledby="privacy-heading">
       <div className="container px-6">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Privacy */}
@@ -27,7 +27,7 @@ const PrivacySection = () => {
             <div className="font-mono-ui text-xs text-muted-foreground tracking-widest uppercase mb-4">
               [ TRUST_PROTOCOL ]
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
+            <h2 id="privacy-heading" className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
               Privacy by <span className="text-primary">design.</span>
             </h2>
             <div className="bg-surface border border-border rounded-sm p-8">
