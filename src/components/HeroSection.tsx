@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 import RadarVisual from "./RadarVisual";
 import WaitlistModal from "./WaitlistModal";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center border-b border-border overflow-hidden" aria-label="Hero section">
       {/* Subtle grid bg */}
@@ -25,18 +28,17 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="font-mono-ui text-xs text-muted-foreground tracking-widest uppercase mb-6">
-              [ PROXIMITY NETWORKING FOR FOUNDERS ]
+              [ {t.hero.label} ]
             </div>
 
             <h1 className="text-5xl md:text-7xl font-extrabold leading-[0.9] tracking-tight mb-6">
-              Meet founders
+              {t.hero.title1}
               <br />
-              <span className="text-gradient-amber">around you.</span>
+              <span className="text-gradient-amber">{t.hero.title2}</span>
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed">
-              Real-time proximity, AI-assisted matching, and messaging in one app.
-              Turn conferences, coworking, and city life into high-signal founder connections.
+              {t.hero.description}
             </p>
 
             <WaitlistModal />
@@ -44,9 +46,9 @@ const HeroSection = () => {
             <div className="mt-8 flex items-center gap-6 font-mono-ui text-xs text-muted-foreground">
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-success" />
-                STATUS: BUILDING
+                {t.hero.statusBuilding}
               </span>
-              <span>7-DAY FREE TRIAL</span>
+              <span>{t.hero.freeTrial}</span>
             </div>
           </motion.div>
 
@@ -59,12 +61,12 @@ const HeroSection = () => {
           >
             <div className="relative bg-surface border border-border rounded-sm p-8 w-full max-w-md">
               <div className="font-mono-ui text-[10px] text-muted-foreground tracking-widest mb-4 flex justify-between">
-                <span>SCAN_ACTIVE</span>
-                <span>5 NEARBY</span>
+                <span>{t.hero.radarLabel1}</span>
+                <span>5 {t.hero.radarLabel2}</span>
               </div>
               <RadarVisual />
               <div className="font-mono-ui text-[10px] text-muted-foreground tracking-widest mt-4 text-center">
-                RADIUS: 500M · OFFSET: ENABLED
+                {t.hero.radarFooter}
               </div>
             </div>
           </motion.div>

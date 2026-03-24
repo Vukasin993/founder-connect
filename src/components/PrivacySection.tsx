@@ -1,23 +1,8 @@
-const faqs = [
-  {
-    q: "Do you store my exact GPS?",
-    a: "No. The backend applies intentional location offsets (~100–500m) before persisting. Map views use generalized positions. Privacy is architectural, not a toggle.",
-  },
-  {
-    q: "Is this a dating app?",
-    a: "No—Founder Field is professional founder networking with business-oriented profiles, projects, and companies.",
-  },
-  {
-    q: "Why pay?",
-    a: "Subscription supports real-time infrastructure: matching, messaging, moderation-ready architecture. The 7-day trial lets you evaluate risk-free.",
-  },
-  {
-    q: "What providers can I sign in with?",
-    a: "Google, Apple, and other supported OAuth providers. Onboarding guides you into a complete profile.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const PrivacySection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="border-b border-border py-24" id="faq" aria-labelledby="privacy-heading">
       <div className="container px-6">
@@ -25,29 +10,19 @@ const PrivacySection = () => {
           {/* Privacy */}
           <div>
             <div className="font-mono-ui text-xs text-muted-foreground tracking-widest uppercase mb-4">
-              [ TRUST_PROTOCOL ]
+              [ {t.privacy.label} ]
             </div>
             <h2 id="privacy-heading" className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
-              Privacy by <span className="text-primary">design.</span>
+              {t.privacy.title} <span className="text-primary">{t.privacy.titleHighlight}</span>
             </h2>
             <div className="bg-surface border border-border rounded-sm p-8">
               <div className="space-y-4 font-mono-ui text-sm">
-                <div className="flex items-start gap-3">
-                  <span className="text-success mt-0.5">✓</span>
-                  <span className="text-muted-foreground">Location offsets applied before storage</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-success mt-0.5">✓</span>
-                  <span className="text-muted-foreground">Map views use generalized positions only</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-success mt-0.5">✓</span>
-                  <span className="text-muted-foreground">No exact GPS stored or transmitted</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-success mt-0.5">✓</span>
-                  <span className="text-muted-foreground">Mutual opt-in required for messaging</span>
-                </div>
+                {t.privacy.checks.map((check, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="text-success mt-0.5">✓</span>
+                    <span className="text-muted-foreground">{check}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -55,13 +30,13 @@ const PrivacySection = () => {
           {/* FAQ */}
           <div>
             <div className="font-mono-ui text-xs text-muted-foreground tracking-widest uppercase mb-4">
-              [ FAQ ]
+              [ {t.privacy.faqLabel} ]
             </div>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
-              Questions.
+              {t.privacy.faqTitle}
             </h2>
             <div className="space-y-px">
-              {faqs.map((faq, i) => (
+              {t.privacy.faqs.map((faq, i) => (
                 <details key={i} className="group bg-surface border border-border rounded-sm">
                   <summary className="p-5 cursor-pointer font-semibold text-sm flex items-center justify-between hover:bg-primary/[0.03] transition-colors">
                     {faq.q}
