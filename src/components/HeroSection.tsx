@@ -59,7 +59,7 @@ const HeroSection = () => {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
             className="flex justify-center"
           >
-            <div className="relative bg-surface border border-border rounded-sm p-8 w-full max-w-md">
+            <div className="relative p-8 w-full max-w-md">
               <div className="font-mono-ui text-[10px] text-muted-foreground tracking-widest mb-4 flex justify-between">
                 <span>{t.hero.radarLabel1}</span>
                 <span>5 {t.hero.radarLabel2}</span>
