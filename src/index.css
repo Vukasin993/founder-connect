@@ -6,47 +6,58 @@
 
 @layer base {
   :root {
-    --background: 240 6% 4%;
-    --foreground: 0 0% 93%;
+    /* Founders Field Palette */
+    --background: #0F172A;
+    --foreground: #FFFFFF;
 
-    --card: 240 5% 8%;
-    --card-foreground: 0 0% 93%;
+    --card: #1E293B;
+    --card-foreground: #FFFFFF;
 
-    --popover: 240 5% 8%;
-    --popover-foreground: 0 0% 93%;
+    --popover: #1E293B;
+    --popover-foreground: #FFFFFF;
 
-    --primary: 43 100% 50%;
-    --primary-foreground: 0 0% 0%;
+    --primary: #3B82F6;
+    --primary-foreground: #FFFFFF;
 
-    --secondary: 240 3% 15%;
-    --secondary-foreground: 0 0% 93%;
+    --secondary: #DBEAFE;
+    --secondary-foreground: #3B82F6;
 
-    --muted: 240 3% 15%;
-    --muted-foreground: 0 0% 53%;
+    --muted: #E0E7FF;
+    --muted-foreground: #6B7280;
 
-    --accent: 43 100% 50%;
-    --accent-foreground: 0 0% 0%;
+    --accent: #3B82F6;
+    --accent-foreground: #FFFFFF;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 93%;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 43 100% 50%;
+    --border: #334155;
+    --input: #334155;
+    --ring: #3B82F6;
 
-    --radius: 2px;
+    --radius: 8px;
 
-    --surface: 240 5% 8%;
-    --success: 135 100% 50%;
+    --surface: #1E293B;
+    --success: #10B981;
+    --warning: #F59E0B;
+    --info: #0EA5E9;
 
-    --sidebar-background: 240 5% 8%;
-    --sidebar-foreground: 0 0% 93%;
-    --sidebar-primary: 43 100% 50%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 240 3% 15%;
-    --sidebar-accent-foreground: 0 0% 93%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 43 100% 50%;
+    --sidebar-background: #1E293B;
+    --sidebar-foreground: #FFFFFF;
+    --sidebar-primary: #3B82F6;
+    --sidebar-primary-foreground: #FFFFFF;
+    --sidebar-accent: #DBEAFE;
+    --sidebar-accent-foreground: #3B82F6;
+    --sidebar-border: #334155;
+    --sidebar-ring: #3B82F6;
+    /* Spacing system (example) */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+    /* Transition */
+    --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -57,11 +68,28 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+    letter-spacing: 0.01em;
+    font-feature-settings: "ss01" on, "cv01" on;
   }
 
   h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
+    font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  /* Modern spacing utilities */
+  .space-xs { margin: var(--space-xs); }
+  .space-sm { margin: var(--space-sm); }
+  .space-md { margin: var(--space-md); }
+  .space-lg { margin: var(--space-lg); }
+  .space-xl { margin: var(--space-xl); }
+
+  .p-xs { padding: var(--space-xs); }
+  .p-sm { padding: var(--space-sm); }
+  .p-md { padding: var(--space-md); }
+  .p-lg { padding: var(--space-lg); }
+  .p-xl { padding: var(--space-xl); }
   }
 }
 
