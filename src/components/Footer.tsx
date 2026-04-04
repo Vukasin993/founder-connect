@@ -1,4 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -13,6 +14,7 @@ const Footer = () => {
           <a href="#features" className="hover:text-primary transition-colors">{t.nav.features.toUpperCase()}</a>
           <a href="#pricing" className="hover:text-primary transition-colors">{t.nav.pricing.toUpperCase()}</a>
           <a href="#faq" className="hover:text-primary transition-colors">{t.nav.faq.toUpperCase()}</a>
+          <Link to="/delete-account" className="hover:text-primary transition-colors">DELETE ACCOUNT</Link>
         </div>
       </div>
     </footer>
