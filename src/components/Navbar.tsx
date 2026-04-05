@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Globe } from "lucide-react";
+import WaitlistModal from "@/components/WaitlistModal";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -9,10 +10,6 @@ const Navbar = () => {
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", () => setScrolled(window.scrollY > 20), { passive: true });
   }
-
-  const scrollToWaitlist = () => {
-    document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "sl" : "en");
@@ -37,12 +34,11 @@ const Navbar = () => {
             <Globe className="w-4 h-4" />
             {language === "en" ? "SL" : "EN"}
           </button>
-          <button
-            onClick={scrollToWaitlist}
-            className="font-mono-ui text-xs font-semibold tracking-widest bg-primary text-primary-foreground px-5 py-2 rounded-sm hover:brightness-90 transition-all"
-          >
-            {t.cta.button}
-          </button>
+          <WaitlistModal trigger={
+            <button className="font-mono-ui text-xs font-semibold tracking-widest bg-primary text-primary-foreground px-5 py-2 rounded-sm hover:brightness-90 transition-all">
+              {t.cta.button}
+            </button>
+          } />
         </div>
       </div>
     </nav>

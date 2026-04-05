@@ -3,9 +3,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 
@@ -26,20 +23,12 @@ const WaitlistModal = ({ trigger }: WaitlistModalProps) => {
       <DialogTrigger asChild>
         {trigger || (
           <button className="font-mono-ui text-xs font-semibold tracking-wider bg-primary text-primary-foreground px-6 py-3 rounded-sm hover:brightness-90 transition-all whitespace-nowrap">
-            JOIN
+            {t.cta.button.toUpperCase()}
           </button>
         )}
       </DialogTrigger>
       <DialogContent className="max-w-[600px] max-h-[85vh] overflow-y-auto p-0">
-        <DialogHeader className="p-6 pb-4">
-          <DialogTitle className="font-mono-ui text-sm tracking-wider">
-            {t.modal.title}
-          </DialogTitle>
-          <DialogDescription className="font-mono-ui text-xs text-muted-foreground">
-            {t.modal.description}
-          </DialogDescription>
-        </DialogHeader>
-        <div className="px-6 pb-6">
+        <div className="p-6">
           <iframe
             key={language}
             width="540"
