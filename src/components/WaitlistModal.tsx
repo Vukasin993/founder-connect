@@ -22,22 +22,26 @@ const WaitlistModal = ({ trigger }: WaitlistModalProps) => {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         {trigger || (
-          <button className="font-mono-ui text-xs font-semibold tracking-wider bg-primary text-primary-foreground px-6 py-3 rounded-sm hover:brightness-90 transition-all whitespace-nowrap">
-            {t.cta.button.toUpperCase()}
+          <button className="inline-flex h-14 items-center rounded-full bg-primary px-7 font-mono-ui text-xs font-semibold uppercase tracking-[0.24em] text-primary-foreground transition-transform hover:-translate-y-0.5 whitespace-nowrap">
+            {t.cta.button.replace(/_/g, " ")}
           </button>
         )}
       </DialogTrigger>
-      <DialogContent className="max-w-[600px] max-h-[85vh] overflow-y-auto p-0">
-        <div className="p-6">
+      <DialogContent className="max-h-[85vh] max-w-[680px] overflow-y-auto border border-border bg-card p-0 text-foreground">
+        <div className="border-b border-border px-6 py-5">
+          <div className="font-mono-ui text-[10px] uppercase tracking-[0.24em] text-primary">{t.modal.title}</div>
+          <div className="mt-2 font-display text-2xl font-semibold text-foreground">{t.modal.description}</div>
+        </div>
+        <div className="p-4 md:p-6">
           <iframe
             key={language}
-            width="540"
-            height="500"
+            width="100%"
+            height="520"
             src={iframeSrc}
             frameBorder="0"
             scrolling="no"
             allowFullScreen
-            className="w-full border-0"
+            className="w-full rounded-[24px] border-0 bg-white"
             title="Waitlist Form"
           />
         </div>

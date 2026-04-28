@@ -8,7 +8,7 @@ const RadarVisual = () => {
   ];
 
   return (
-    <div className="relative w-72 h-72 mx-auto">
+    <div className="relative mx-auto h-72 w-72 md:h-80 md:w-80">
       {/* Rings */}
       {[1, 2, 3].map((i) => (
         <div
@@ -28,7 +28,7 @@ const RadarVisual = () => {
         <div
           className="absolute top-1/2 left-1/2 w-1/2 h-px origin-left"
           style={{
-            background: "linear-gradient(90deg, hsl(43 100% 50% / 0.8), transparent)",
+            background: "linear-gradient(90deg, hsl(var(--primary) / 0.95), transparent)",
           }}
         />
       </div>
