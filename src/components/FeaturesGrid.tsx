@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackClick } from "@/lib/analytics";
 import { MapPin, Brain, MessageSquare, Users, QrCode, Search, CreditCard, Bell, Briefcase, Shield, Zap, Layers } from "lucide-react";
 
 const icons = [MapPin, Zap, Brain, Layers, MessageSquare, Briefcase, QrCode, Users, Search, CreditCard, Bell, Shield];
@@ -28,6 +29,10 @@ const FeaturesGrid = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.45, delay: i * 0.04 }}
+                  onClick={() => trackClick("feature_card", "features_section", {
+                    feature_label: f.label,
+                    feature_title: f.title,
+                  })}
                   className="section-shell group rounded-[28px] p-6 transition-transform duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-start justify-between gap-4">

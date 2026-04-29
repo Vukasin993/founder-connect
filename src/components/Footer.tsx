@@ -1,5 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
+import { trackClick } from "@/lib/analytics";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -18,11 +19,11 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-wrap items-center gap-5 font-mono-ui text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-          <a href="#features" className="transition-colors hover:text-primary">{t.nav.features}</a>
-          <a href="#pricing" className="transition-colors hover:text-primary">{t.nav.pricing}</a>
-          <a href="#faq" className="transition-colors hover:text-primary">{t.nav.faq}</a>
-          <Link to="/privacy-policy" className="transition-colors hover:text-primary">{t.footer.links.privacyPolicy}</Link>
-          <Link to="/delete-account" className="transition-colors hover:text-primary">{t.footer.links.deleteAccount}</Link>
+          <a href="#features" onClick={() => trackClick("footer_features", "footer")} className="transition-colors hover:text-primary">{t.nav.features}</a>
+          <a href="#pricing" onClick={() => trackClick("footer_pricing", "footer")} className="transition-colors hover:text-primary">{t.nav.pricing}</a>
+          <a href="#faq" onClick={() => trackClick("footer_faq", "footer")} className="transition-colors hover:text-primary">{t.nav.faq}</a>
+          <Link to="/privacy-policy" onClick={() => trackClick("footer_privacy_policy", "footer")} className="transition-colors hover:text-primary">{t.footer.links.privacyPolicy}</Link>
+          <Link to="/delete-account" onClick={() => trackClick("footer_delete_account", "footer")} className="transition-colors hover:text-primary">{t.footer.links.deleteAccount}</Link>
         </div>
       </div>
     </footer>

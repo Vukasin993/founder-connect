@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Globe } from "lucide-react";
+import { trackClick, trackEvent } from "@/lib/analytics";
 import WaitlistModal from "@/components/WaitlistModal";
 
 const Navbar = () => {
@@ -24,6 +25,11 @@ const Navbar = () => {
   }, []);
 
   const toggleLanguage = () => {
+    trackEvent("language_toggle", {
+      from_language: language,
+      to_language: language === "en" ? "sl" : "en",
+      location: "navbar",
+    });
     setLanguage(language === "en" ? "sl" : "en");
   };
 
@@ -34,7 +40,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex h-20 items-center justify-between gap-6 px-6">
-        <a href="#top" className="flex items-center gap-3">
+        <a href="#top" className="flex items-center gap-3" onClick={() => trackClick("logo", "navbar") }>
           <span className="flex h-11 w-11 items-center justify-center rounded-full border border-primary/40 bg-primary/12 font-display text-sm font-bold text-primary">
             FF
           </span>
@@ -53,6 +59,7 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
+              onClick={() => trackClick(`nav_${item.href.replace("#", "")}`, "navbar")}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {item.label}
@@ -69,11 +76,14 @@ const Navbar = () => {
             <Globe className="w-4 h-4" />
             {language === "en" ? "SL" : "EN"}
           </button>
-          <WaitlistModal trigger={
+          <WaitlistModal
+            source="navbar"
+            trigger={
             <button className="inline-flex h-11 items-center rounded-full bg-primary px-5 font-mono-ui text-[11px] font-semibold uppercase tracking-[0.24em] text-primary-foreground transition-transform hover:-translate-y-0.5">
               {t.cta.button.replace(/_/g, " ")}
             </button>
-          } />
+            }
+          />
         </div>
       </div>
     </nav>

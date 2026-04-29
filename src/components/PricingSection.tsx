@@ -1,4 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackClick } from "@/lib/analytics";
 
 const PricingSection = () => {
   const { t } = useLanguage();
@@ -16,7 +17,7 @@ const PricingSection = () => {
         </div>
 
         <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="section-shell rounded-[32px] p-8 md:p-10">
+          <div className="section-shell rounded-[32px] p-8 md:p-10" onClick={() => trackClick("pricing_plan_card", "pricing_section")}>
             <div className="font-mono-ui text-[10px] uppercase tracking-[0.26em] text-primary">{t.pricing.planLabel}</div>
             <div className="mt-6 flex items-end gap-2">
               <span className="font-display text-6xl font-bold tracking-[-0.06em] text-foreground">{t.pricing.price}</span>
@@ -30,7 +31,11 @@ const PricingSection = () => {
           <div className="section-shell rounded-[32px] p-8 md:p-10">
             <div className="grid gap-3 sm:grid-cols-2">
               {t.pricing.features.map((item) => (
-                <div key={item} className="rounded-[22px] border border-border bg-secondary/65 p-4">
+                <div
+                  key={item}
+                  onClick={() => trackClick("pricing_feature_interest", "pricing_section", { pricing_feature: item })}
+                  className="rounded-[22px] border border-border bg-secondary/65 p-4"
+                >
                   <div className="font-mono-ui text-[10px] uppercase tracking-[0.22em] text-primary">Included</div>
                   <div className="mt-3 text-sm leading-relaxed text-foreground">{item}</div>
                 </div>

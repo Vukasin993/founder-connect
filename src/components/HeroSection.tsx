@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackClick } from "@/lib/analytics";
 import RadarVisual from "./RadarVisual";
 import WaitlistModal from "./WaitlistModal";
 
@@ -51,13 +52,14 @@ const HeroSection = () => {
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <WaitlistModal trigger={
+              <WaitlistModal source="hero_primary_cta" trigger={
                 <button className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-7 font-mono-ui text-xs font-semibold uppercase tracking-[0.26em] text-primary-foreground transition-transform hover:-translate-y-0.5">
                   {t.cta.button.replace(/_/g, " ")}
                 </button>
               } />
               <a
                 href="#how-it-works"
+                onClick={() => trackClick("hero_secondary_cta", "hero", { target_section: "how-it-works" })}
                 className="inline-flex h-14 items-center justify-center rounded-full border border-border bg-card/70 px-7 font-mono-ui text-xs font-medium uppercase tracking-[0.24em] text-foreground transition-colors hover:border-primary/50 hover:text-primary"
               >
                 {t.nav.howItWorks}

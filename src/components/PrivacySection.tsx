@@ -1,4 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackClick, trackEvent } from "@/lib/analytics";
 
 const PrivacySection = () => {
   const { t } = useLanguage();
@@ -34,7 +35,18 @@ const PrivacySection = () => {
             </h2>
             <div className="mt-8 space-y-4">
               {t.privacy.faqs.map((faq, i) => (
-                <details key={i} className="section-shell group rounded-[26px] p-0">
+                <details
+                  key={i}
+                  className="section-shell group rounded-[26px] p-0"
+                  onToggle={(event) => {
+                    if ((event.currentTarget as HTMLDetailsElement).open) {
+                      trackEvent("faq_expand", {
+                        question: faq.q,
+                        index: i + 1,
+                      });
+                    }
+                  }}
+                >
                   <summary className="flex cursor-pointer items-center justify-between gap-6 p-6 text-left font-display text-lg font-semibold text-foreground transition-colors hover:text-primary">
                     <span>{faq.q}</span>
                     <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-secondary/80 font-mono-ui text-xs text-muted-foreground group-open:hidden">+</span>

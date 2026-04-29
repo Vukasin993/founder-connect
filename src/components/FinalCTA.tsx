@@ -18,6 +18,7 @@ const FinalCTA = () => {
           </p>
           <div className="mt-10 flex justify-center">
           <WaitlistModal
+            source="final_cta"
             trigger={
               <button className="inline-flex h-14 items-center rounded-full bg-primary px-7 font-mono-ui text-xs font-semibold uppercase tracking-[0.24em] text-primary-foreground transition-transform hover:-translate-y-0.5 whitespace-nowrap">
                 {t.cta.button.replace(/_/g, " ")}

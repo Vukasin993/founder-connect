@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { BriefcaseBusiness, Code2, Megaphone, Rocket, Users, WalletCards } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trackClick } from "@/lib/analytics";
 
 const icons = [Rocket, Users, Code2, WalletCards, Megaphone, BriefcaseBusiness];
 
@@ -41,6 +42,10 @@ const AudienceSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.45, delay: index * 0.05 }}
+                  onClick={() => trackClick("audience_profile_card", "audience_section", {
+                    profile_role: profile.role,
+                    profile_tag: profile.tag,
+                  })}
                   className="section-shell rounded-[28px] p-6"
                 >
                   <div className="flex items-start justify-between gap-4">
