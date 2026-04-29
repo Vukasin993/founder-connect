@@ -16,9 +16,6 @@ const FeaturesGrid = () => {
             <h2 id="features-heading" className="max-w-md font-display text-4xl font-bold tracking-[-0.05em] md:text-6xl">
               {t.features.title} <span className="text-primary">{t.features.titleHighlight}</span>
             </h2>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              Futlab’s strongest pattern is not only the dark palette. It is the mix of big editorial heading on the left and structured role cards on the right. This section now follows that same momentum.
-            </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">

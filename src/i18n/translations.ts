@@ -1,22 +1,89 @@
 export const translations = {
   en: {
     nav: {
+      audience: "Who It's For",
       features: "Features",
       howItWorks: "How It Works",
       faq: "FAQ",
       pricing: "Pricing",
       waitlist: "Waitlist",
+      brandSubline: "Proximity Network",
     },
     hero: {
-      label: "PROXIMITY NETWORKING FOR FOUNDERS",
-      title1: "Meet founders",
+      label: "PROXIMITY NETWORKING FOR STARTUP PEOPLE",
+      title1: "Meet the right people",
       title2: "around you.",
-      description: "Real-time proximity, AI-assisted matching, and messaging in one app. Turn conferences, coworking, and city life into high-signal founder connections.",
-      statusBuilding: "STATUS: BUILDING",
+      description: "Real-time proximity, AI-assisted matching, and messaging in one app. Meet founders, cofounders, developers, investors, and growth people in the moments where intros actually happen.",
+      statusBuilding: "STATUS: TESTING",
       freeTrial: "7-DAY FREE TRIAL",
       radarLabel1: "SCAN_ACTIVE",
       radarLabel2: "NEARBY",
       radarFooter: "RADIUS: 500M · OFFSET: ENABLED",
+      panelBadge: "LIVE NETWORK",
+      panelTitle: "Founders, developers, and investors in one proximity layer.",
+      panelDescription: "Discover people nearby, understand why you match, and move into real-time conversation without exposing exact location.",
+      panelCard1Label: "MATCH FLOW",
+      panelCard1Title: "Discovery, matching, and chat in one flow.",
+      panelCard2Label: "NETWORK SIGNAL",
+      panelCard2Title: "Built for founders, operators, developers, and investors.",
+      radarNodes: ["SaaS Founder", "Angel Investor", "CTO", "Growth Lead", "Dev Agency"],
+      stats: [
+        { value: "24/7", label: "Nearby discovery" },
+        { value: "500M", label: "Privacy-safe radius" },
+        { value: "AI", label: "Match explanations" },
+        { value: "CHAT", label: "Real-time messaging" },
+      ],
+      ticker: ["FOUNDERS", "DEVELOPERS", "INVESTORS", "OPERATORS", "MATCH", "CHAT", "MEET", "BUILD"],
+    },
+    audience: {
+      label: "IDEAL USER PROFILES",
+      title: "Built for the people who",
+      titleHighlight: "actually move startups.",
+      description: "Founder Field is not just another social app. It helps startup people discover who is nearby, understand why a connection matters, and turn quick proximity into useful conversations.",
+      installReasons: [
+        "See relevant people around you instead of hoping for random networking luck.",
+        "Get AI-assisted match context before you decide to start a conversation.",
+        "Move from discovery to chat fast when you are at events, coworking spaces, or in your city.",
+      ],
+      cardBenefitLabel: "WHY THEY INSTALL",
+      profiles: [
+        {
+          tag: "PRIMARY ICP",
+          role: "Founders",
+          description: "People building companies who want faster access to cofounders, investors, operators, and high-signal peers nearby.",
+          benefit: "Find relevant startup connections without wasting time on low-context networking.",
+        },
+        {
+          tag: "EARLY TEAM",
+          role: "Cofounders & Operators",
+          description: "People looking for strong builders, go-to-market partners, or execution support around them.",
+          benefit: "Spot complementary people nearby and start conversations with clear intent.",
+        },
+        {
+          tag: "TECH TALENT",
+          role: "Developers",
+          description: "Engineers who want startup opportunities, technical collaborations, or founder teams worth joining.",
+          benefit: "Meet founders and products that match your skills, interests, and stage preference.",
+        },
+        {
+          tag: "CAPITAL",
+          role: "Investors",
+          description: "Angels and early-stage investors who want better access to founders, startup activity, and warm local deal flow.",
+          benefit: "See promising people nearby and connect before the opportunity goes cold.",
+        },
+        {
+          tag: "GROWTH",
+          role: "Marketing Experts",
+          description: "Growth marketers and GTM specialists who want to meet teams that need distribution, demand generation, and launch support.",
+          benefit: "Get discovered by startup teams that actively need your expertise.",
+        },
+        {
+          tag: "NETWORK",
+          role: "Startup Specialists",
+          description: "Designers, product people, advisors, recruiters, and other startup specialists who bring leverage to growing teams.",
+          benefit: "Use proximity and matching to turn niche expertise into real startup relationships.",
+        },
+      ],
     },
     features: {
       label: "FEATURE_SET",
@@ -50,8 +117,8 @@ export const translations = {
         },
         {
           label: "PROFILES",
-          title: "Founder Profiles",
-          desc: "Company, industry, stage, interests, seeking, offering, and social links. Skip 'what do you do?'",
+          title: "Startup Profiles",
+          desc: "Role, company, industry, stage, interests, what you need, what you offer, and social links. Skip the vague introductions.",
         },
         {
           label: "SHARE",
@@ -66,7 +133,7 @@ export const translations = {
         {
           label: "SEARCH",
           title: "Search & Discovery",
-          desc: "Find founders beyond the map tab when you know what you're looking for.",
+          desc: "Find people beyond the map tab when you know the type of connection you want.",
         },
         {
           label: "SUBSCRIBE",
@@ -131,7 +198,7 @@ export const translations = {
         },
         {
           q: "Is this a dating app?",
-          a: "No—Founder Field is professional founder networking with business-oriented profiles, projects, and companies.",
+          a: "No. Founder Field is a professional networking app for startup people such as founders, investors, developers, operators, and growth specialists.",
         },
         {
           q: "Why pay?",
@@ -170,7 +237,7 @@ export const translations = {
       bgText: "FOUNDER",
     },
     footer: {
-      tagline: "Proximity networking for founders.",
+      tagline: "Proximity networking for startup people.",
       rights: "All rights reserved.",
       links: {
         privacy: "Privacy",
@@ -235,7 +302,7 @@ export const translations = {
       description: "This Privacy Policy explains how Founder Field collects, uses, and protects your personal data. By using the Founder Field app or website, you agree to the practices described here.",
       lastUpdatedLabel: "LAST_UPDATED: 2026-04-04",
       s01Title: "01 — WHO WE ARE",
-      s01p1: "Founder Field (\"we\", \"us\", \"our\") is a proximity-based networking app for founders. We are the data controller for personal data processed through our mobile application and this website.",
+      s01p1: "Founder Field (\"we\", \"us\", \"our\") is a proximity-based networking app for startup people, including founders, builders, investors, and operators. We are the data controller for personal data processed through our mobile application and this website.",
       s01Contact: "Contact:",
       s02Title: "02 — DATA WE COLLECT",
       s02Items: [
@@ -306,22 +373,89 @@ export const translations = {
   },
   sl: {
     nav: {
+      audience: "Za koga je",
       features: "Funkcije",
       howItWorks: "Kako deluje",
       faq: "Pogosta vprašanja",
       pricing: "Cenik",
       waitlist: "Pridruži se",
+      brandSubline: "Omrežje bližine",
     },
     hero: {
-      label: "OMREŽENJE NA PODLAGI BLIŽINE ZA USTANOVITELJE",
-      title1: "Srečaj ustanovitelje",
+      label: "OMREŽENJE NA PODLAGI BLIŽINE ZA STARTUP LJUDI",
+      title1: "Srečaj prave ljudi",
       title2: "v tvoji okolici.",
-      description: "Povezovanje v realnem času, ujemanje s pomočjo UI in sporočanje v eni aplikaciji. Spremeni konference, coworking prostore in mestno življenje v visokokakovostne stike z ustanovitelji.",
-      statusBuilding: "STATUS: V IZDELAVI",
+      description: "Povezovanje v realnem času, ujemanje s pomočjo UI in sporočanje v eni aplikaciji. Spoznaj ustanovitelje, soustanovitelje, razvijalce, investitorje in growth strokovnjake tam, kjer se uvodi dejansko zgodijo.",
+      statusBuilding: "STATUS: TESTIRANJE",
       freeTrial: "7-DNEVNA BREZPLAČNA PREIZKUŠNJA",
       radarLabel1: "ISKANJE_AKTIVNO",
       radarLabel2: "V BLIŽINI",
       radarFooter: "RADIJ: 500M · ZAMIK: OMOGOČEN",
+      panelBadge: "OMREŽJE V ŽIVO",
+      panelTitle: "Ustanovitelji, razvijalci in investitorji v enem sloju bližine.",
+      panelDescription: "Odkrij ljudi v bližini, razumi zakaj se ujemate in preidi v pogovor v realnem času brez razkrivanja točne lokacije.",
+      panelCard1Label: "POTEK UJEMANJA",
+      panelCard1Title: "Od odkrivanja do ujemanja in klepeta v enem toku.",
+      panelCard2Label: "SIGNAL OMREŽJA",
+      panelCard2Title: "Zgrajeno za ustanovitelje, operativce, razvijalce in investitorje.",
+      radarNodes: ["SaaS ustanovitelj", "Angel investitor", "CTO", "Vodja rasti", "Dev agencija"],
+      stats: [
+        { value: "24/7", label: "Odkrivanje v bližini" },
+        { value: "500M", label: "Radij z zasebnostjo" },
+        { value: "UI", label: "Razlage ujemanja" },
+        { value: "KLEPET", label: "Sporočanje v realnem času" },
+      ],
+      ticker: ["USTANOVITELJI", "RAZVIJALCI", "INVESTITORJI", "OPERATIVCI", "UJEMANJE", "KLEPET", "SREČAJ", "GRADI"],
+    },
+    audience: {
+      label: "IDEALNI PROFILI UPORABNIKOV",
+      title: "Zgrajeno za ljudi, ki",
+      titleHighlight: "dejansko premikajo startupe.",
+      description: "Founder Field ni le še ena družbena aplikacija. Pomaga startup ljudem odkriti, kdo je v bližini, razumeti zakaj je povezava pomembna, in hitro bližino pretvoriti v uporaben pogovor.",
+      installReasons: [
+        "Poglej relevantne ljudi v bližini namesto da upaš na naključno mreženje.",
+        "Pred začetkom pogovora dobi kontekst ujemanja s pomočjo UI.",
+        "Hitro preidi od odkrivanja do klepeta na dogodkih, v coworking prostorih ali v svojem mestu.",
+      ],
+      cardBenefitLabel: "ZAKAJ NAMESTIJO APLIKACIJO",
+      profiles: [
+        {
+          tag: "PRIMARNI ICP",
+          role: "Ustanovitelji",
+          description: "Ljudje, ki gradijo podjetja in želijo hitrejši dostop do soustanoviteljev, investitorjev, operativcev in visokokakovostnih stikov v bližini.",
+          benefit: "Najdejo relevantne startup povezave brez izgubljanja časa z mreženjem brez konteksta.",
+        },
+        {
+          tag: "ZGODNJA EKIPA",
+          role: "Soustanovitelji in operativci",
+          description: "Ljudje, ki iščejo močne graditelje, go-to-market partnerje ali podporo pri izvedbi okoli sebe.",
+          benefit: "Hitro opazijo komplementarne ljudi v bližini in začnejo pogovor z jasnim namenom.",
+        },
+        {
+          tag: "TEHNIČNI TALENT",
+          role: "Razvijalci",
+          description: "Inženirji, ki želijo startup priložnosti, tehnična sodelovanja ali ustanoviteljske ekipe, ki se jim splača pridružiti.",
+          benefit: "Spoznajo ustanovitelje in produkte, ki se ujemajo z njihovimi znanji, interesi in fazo.",
+        },
+        {
+          tag: "KAPITAL",
+          role: "Investitorji",
+          description: "Angelski in zgodnji investitorji, ki želijo boljši dostop do ustanoviteljev, startup aktivnosti in lokalnega deal flowa.",
+          benefit: "Vidijo obetavne ljudi v bližini in se povežejo, preden priložnost postane hladna.",
+        },
+        {
+          tag: "RAST",
+          role: "Marketing strokovnjaki",
+          description: "Growth marketerji in GTM specialisti, ki želijo spoznati ekipe, ki potrebujejo distribucijo, povpraševanje in podporo pri lansiranju.",
+          benefit: "Odkrijejo jih startup ekipe, ki aktivno potrebujejo njihovo ekspertizo.",
+        },
+        {
+          tag: "OMREŽJE",
+          role: "Startup specialisti",
+          description: "Oblikovalci, produktni ljudje, svetovalci, recruiterji in drugi specialisti, ki rastočim ekipam prinašajo vzvod.",
+          benefit: "Z uporabo bližine in ujemanja spremenijo nišno ekspertizo v resnične startup odnose.",
+        },
+      ],
     },
     features: {
       label: "NABOR_FUNKCIJ",
@@ -355,8 +489,8 @@ export const translations = {
         },
         {
           label: "PROFILI",
-          title: "Profili ustanoviteljev",
-          desc: "Podjetje, industrija, faza, interesi, kaj iščeš in ponujaš ter socialne povezave. Preskoči 'kaj delaš?'",
+          title: "Startup profili",
+          desc: "Vloga, podjetje, industrija, faza, interesi, kaj potrebuješ, kaj ponujaš in socialne povezave. Preskoči nejasne predstavitve.",
         },
         {
           label: "DELJENJE",
@@ -371,7 +505,7 @@ export const translations = {
         {
           label: "ISKANJE",
           title: "Iskanje in odkrivanje",
-          desc: "Najdi ustanovitelje onkraj zavihka zemljevida, ko veš, kaj iščeš.",
+          desc: "Najdi ljudi tudi zunaj zavihka zemljevida, ko veš, kakšen stik želiš.",
         },
         {
           label: "NAROČNINA",
@@ -436,7 +570,7 @@ export const translations = {
         },
         {
           q: "Ali je to aplikacija za zmenke?",
-          a: "Ne—Founder Field je profesionalno omreženje za ustanovitelje s poslovnimi profili, projekti in podjetji.",
+          a: "Ne. Founder Field je profesionalna networking aplikacija za startup ljudi, kot so ustanovitelji, investitorji, razvijalci, operativci in growth specialisti.",
         },
         {
           q: "Zakaj plačati?",
@@ -475,7 +609,7 @@ export const translations = {
       bgText: "USTANOVITELJ",
     },
     footer: {
-      tagline: "Omreženje na podlagi bližine za ustanovitelje.",
+      tagline: "Omreženje na podlagi bližine za startup ljudi.",
       rights: "Vse pravice pridržane.",
       links: {
         privacy: "Zasebnost",
@@ -540,7 +674,7 @@ export const translations = {
       description: "Ta politika zasebnosti pojasnjuje, kako Founder Field zbira, uporablja in varuje tvoje osebne podatke. Z uporabo aplikacije ali spletnega mesta Founder Field se strinjaš s praksami, opisanimi tukaj.",
       lastUpdatedLabel: "ZADNJA_POSODOBITEV: 2026-04-04",
       s01Title: "01 — KDO SMO",
-      s01p1: "Founder Field (»mi«, »nas«, »naše«) je aplikacija za omreženje na podlagi bližine za ustanovitelje. Smo upravljavec osebnih podatkov, ki se obdelujejo prek naše mobilne aplikacije in tega spletnega mesta.",
+      s01p1: "Founder Field (»mi«, »nas«, »naše«) je aplikacija za omreženje na podlagi bližine za startup ljudi, vključno z ustanovitelji, graditelji, investitorji in operativci. Smo upravljavec osebnih podatkov, ki se obdelujejo prek naše mobilne aplikacije in tega spletnega mesta.",
       s01Contact: "Kontakt:",
       s02Title: "02 — PODATKI, KI JIH ZBIRAMO",
       s02Items: [

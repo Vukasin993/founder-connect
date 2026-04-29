@@ -1,10 +1,13 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const RadarVisual = () => {
+  const { t } = useLanguage();
   const nodes = [
-    { x: 30, y: 25, label: "SaaS Founder", delay: "0s" },
-    { x: 70, y: 35, label: "Angel Investor", delay: "0.5s" },
-    { x: 45, y: 65, label: "CTO", delay: "1s" },
-    { x: 20, y: 55, label: "Growth Lead", delay: "1.5s" },
-    { x: 75, y: 70, label: "Dev Agency", delay: "0.8s" },
+    { x: 30, y: 25, label: t.hero.radarNodes[0], delay: "0s" },
+    { x: 70, y: 35, label: t.hero.radarNodes[1], delay: "0.5s" },
+    { x: 45, y: 65, label: t.hero.radarNodes[2], delay: "1s" },
+    { x: 20, y: 55, label: t.hero.radarNodes[3], delay: "1.5s" },
+    { x: 75, y: 70, label: t.hero.radarNodes[4], delay: "0.8s" },
   ];
 
   return (

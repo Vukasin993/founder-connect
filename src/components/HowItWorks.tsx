@@ -14,9 +14,6 @@ const HowItWorks = () => {
               {t.howItWorks.title} <span className="text-primary">{t.howItWorks.titleHighlight}</span>
             </h2>
           </div>
-          <p className="max-w-lg text-base leading-relaxed text-muted-foreground">
-            The flow is now framed as a fast, cinematic onboarding path, closer to Futlab’s “up and running” rhythm than a generic SaaS feature checklist.
-          </p>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">

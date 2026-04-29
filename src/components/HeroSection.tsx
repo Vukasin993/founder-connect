@@ -5,13 +5,8 @@ import WaitlistModal from "./WaitlistModal";
 
 const HeroSection = () => {
   const { t } = useLanguage();
-  const heroStats = [
-    { value: "24/7", label: "City-ready discovery" },
-    { value: "500m", label: "Privacy-safe radius" },
-    { value: "AI", label: "Match reasoning built in" },
-    { value: "Real-time", label: "Messaging and meetups" },
-  ];
-  const tickerItems = ["DISCOVER", "MATCH", "MEET", "BUILD", "INTRODUCE", "COFOUND", "SCOUT", "GROW"];
+  const heroStats = t.hero.stats;
+  const tickerItems = t.hero.ticker;
 
   return (
     <section
@@ -65,7 +60,7 @@ const HeroSection = () => {
                 href="#how-it-works"
                 className="inline-flex h-14 items-center justify-center rounded-full border border-border bg-card/70 px-7 font-mono-ui text-xs font-medium uppercase tracking-[0.24em] text-foreground transition-colors hover:border-primary/50 hover:text-primary"
               >
-                See how it works
+                {t.nav.howItWorks}
               </a>
             </div>
 
@@ -88,16 +83,16 @@ const HeroSection = () => {
           >
             <div className="section-shell relative overflow-hidden p-6 md:p-8">
               <div className="absolute right-5 top-5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 font-mono-ui text-[10px] uppercase tracking-[0.24em] text-primary">
-                Live session
+                {t.hero.panelBadge}
               </div>
               <div className="font-mono-ui text-[10px] uppercase tracking-[0.26em] text-muted-foreground">
                 {t.hero.radarLabel1}
               </div>
               <div className="mt-3 max-w-sm font-display text-3xl font-bold leading-tight text-foreground md:text-4xl">
-                A landing page that feels active before users even sign up.
+                {t.hero.panelTitle}
               </div>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
-                Borrowing the rhythm from Futlab: strong wordmark, structured proof points, dark layered panels, and CTA hierarchy that pushes people into the waitlist.
+                {t.hero.panelDescription}
               </p>
 
               <div className="mt-8 rounded-[28px] border border-border bg-background/80 p-6">
@@ -114,18 +109,18 @@ const HeroSection = () => {
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-[24px] border border-border bg-secondary/70 p-4">
                   <div className="font-mono-ui text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
-                    Conversion path
+                    {t.hero.panelCard1Label}
                   </div>
                   <div className="mt-2 font-display text-2xl font-semibold text-foreground">
-                    Discovery to intro in one flow.
+                    {t.hero.panelCard1Title}
                   </div>
                 </div>
                 <div className="rounded-[24px] border border-border bg-secondary/70 p-4">
                   <div className="font-mono-ui text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
-                    Visual cue
+                    {t.hero.panelCard2Label}
                   </div>
                   <div className="mt-2 font-display text-2xl font-semibold text-foreground">
-                    Dark sport-tech energy.
+                    {t.hero.panelCard2Title}
                   </div>
                 </div>
               </div>

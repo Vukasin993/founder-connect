@@ -7,6 +7,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { language, setLanguage, t } = useLanguage();
   const navItems = [
+    { href: "#who-its-for", label: t.nav.audience },
     { href: "#features", label: t.nav.features },
     { href: "#how-it-works", label: t.nav.howItWorks },
     { href: "#pricing", label: t.nav.pricing },
@@ -42,7 +43,7 @@ const Navbar = () => {
               Founder Field
             </span>
             <span className="block font-mono-ui text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
-              Proximity Network
+              {t.nav.brandSubline}
             </span>
           </span>
         </a>

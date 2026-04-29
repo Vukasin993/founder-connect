@@ -13,9 +13,6 @@ const PricingSection = () => {
               {t.pricing.title} <span className="text-primary">{t.pricing.titleHighlight}</span>
             </h2>
           </div>
-          <p className="max-w-lg text-base leading-relaxed text-muted-foreground">
-            Instead of a generic pricing box, this now reads like a launch offer card with proof and context around the plan.
-          </p>
         </div>
 
         <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
@@ -28,9 +25,6 @@ const PricingSection = () => {
             <div className="mt-3 inline-flex rounded-full border border-primary/25 bg-primary/10 px-4 py-2 font-mono-ui text-[11px] uppercase tracking-[0.24em] text-primary">
               {t.pricing.trial}
             </div>
-            <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground">
-              Built for founders who actually meet in person: coworking spaces, events, dinners, operator networks, and serendipitous city moments.
-            </p>
           </div>
 
           <div className="section-shell rounded-[32px] p-8 md:p-10">
@@ -41,12 +35,6 @@ const PricingSection = () => {
                   <div className="mt-3 text-sm leading-relaxed text-foreground">{item}</div>
                 </div>
               ))}
-            </div>
-            <div className="mt-6 rounded-[24px] border border-border bg-background/70 p-5">
-              <div className="font-mono-ui text-[10px] uppercase tracking-[0.22em] text-muted-foreground">Launch note</div>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                The structure is intentionally simple: one paid tier, strong free-trial framing, and the waitlist doing the heavy lifting before the app ships.
-              </p>
             </div>
           </div>
         </div>

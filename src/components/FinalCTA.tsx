@@ -16,11 +16,6 @@ const FinalCTA = () => {
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {t.cta.description}
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-3 font-mono-ui text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-            <span className="rounded-full border border-border bg-secondary/70 px-4 py-2">Launch list</span>
-            <span className="rounded-full border border-border bg-secondary/70 px-4 py-2">City by city rollout</span>
-            <span className="rounded-full border border-border bg-secondary/70 px-4 py-2">High-intent founders only</span>
-          </div>
           <div className="mt-10 flex justify-center">
           <WaitlistModal
             trigger={
